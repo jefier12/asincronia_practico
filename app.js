@@ -2,6 +2,19 @@
 import { getUsuarios, getPost, getCommets,getAlbums,getPhotos } from "./modulos/index.js";
 // Definimos la URL base de la API
 const URL = "https://jsonplaceholder.typicode.com";
+//funcion asincrona para ingresar al metodo listas pendientes y ingresar a ellas
+const listasPen = async () => {
+  //obtenemos los datos de los usuarios
+  const usuarios = await getUsuarios(URL);
+  //usamos.map para crear un arreglo personalizado y traer las pareas pendientes
+  usuarios.map( usuario =>
+  { 
+    //imprimimos las tareas pendinetes usando el usuario id
+    console.log(`${usuario.id}.${usuario.company.bs}`);
+  });
+};
+//llamamos a la funcion listasPen
+listasPen();
 // Definimos un ID de usuario específico
 const usuarioId = 3;
 // Función asíncrona para obtener información de un usuario por su ID
