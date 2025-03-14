@@ -9,6 +9,7 @@ const listasPen = async () => {
   //usamos.map para crear un arreglo personalizado y traer las pareas pendientes
   usuarios.map( usuario =>
   { 
+    //d
     //imprimimos las tareas pendinetes usando el usuario id
     console.log(`${usuario.id}.${usuario.company.bs}`);
   });
